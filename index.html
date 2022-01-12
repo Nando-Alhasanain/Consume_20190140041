@@ -14,30 +14,33 @@
     
 </head>
 <body>
-    <div>
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Sistem Pendataan Toserba</a>
-            <input class="form-control mr-sm-2" id="myInput" type="search" placeholder="Search" aria-label="Search">
-            <button type="button" class="btn btn-secondary" onclick="showUserCreateBox()">Add Costumer</button>
+    <nav class="navbar navbar-light bg-dark">
+        <div class="container ">
+          <a class="navbar-brand text-light">Pendataan Barang</a>
+          <form class="d-flex ">
+            <input class="form-control me-5 " id="myInput" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+      </nav>
 
-        </nav>
-    </div>
-
-    <div class="container">
+    <!-- <div class="container">
         <input class="form-control" id="myInput" type="text" placeholder="Search..">
         <div class="p-2 bd-highlight">
         </div>
+    </div> -->
+
+    <div class="p container">
+        <button type="button" class="btn btn-secondary" onclick="showUserCreateBox()">Add Costumer</button>
     </div>
-    <div class="table-dark">
-        <table class="table table-dark">
-            <thead class="table-dark">
+    <div class="container">
+        <table class="table table-striped">
+            <thead class="table table-striped">
                 <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Nama Barang</th>
                         <th scope="col">Jumlah</th>
                         <th scope="col">Harga</th>
                         <th scope="col"></th>
-                        
                 </tr>
             </thead>
             <tbody id="mytable">
@@ -85,7 +88,7 @@
 
         function showUserCreateBox() {
             Swal.fire({
-                title: 'Tambah Costumer',
+                title: 'Tambah Barang',
                 html: '<input id="id" class="swal2-input" placeholder="id">' +
                     '<input id="namaBarang" class="swal2-input" placeholder="Nama Barang">' +
                     '<input id="jumlah" class="swal2-input" placeholder="Jumlah">' +

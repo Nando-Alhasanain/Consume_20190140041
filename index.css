@@ -1,8 +1,12 @@
 body {
   font-size: 1.25rem;
-  background-color: #306294;
+  background-color: #ffffff;
 }
 
 td {
   line-height: 3rem;
+}
+
+.p {
+  padding: 1rem;
 }
