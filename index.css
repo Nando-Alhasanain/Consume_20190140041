@@ -10,3 +10,12 @@ td {
 .p {
   padding: 1rem;
 }
+
+.data {
+  display: none;
+}
+
+.g-signin2 {
+  position: center;
+  margin-top: -60px;
+}

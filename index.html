@@ -30,7 +30,7 @@
     </div> -->
 
     <div class="p container">
-        <button type="button" class="btn btn-secondary" onclick="showUserCreateBox()">Add Costumer</button>
+        <button type="button" class="btn btn-secondary" onclick="showUserCreateBox()">Tambah Barang</button>
     </div>
     <div class="container">
         <table class="table table-striped">
@@ -40,7 +40,7 @@
                         <th scope="col">Nama Barang</th>
                         <th scope="col">Jumlah</th>
                         <th scope="col">Harga</th>
-                        <th scope="col"></th>
+                        <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody id="mytable">
@@ -116,7 +116,7 @@
                 "harga": harga
             }));
             xhttp.onreadystatechange = function() {
-                if (this.status == 200) {
+                if (this.readyState == 4 && this.status == 200) {
                     const objects = JSON.parse(this.responseText);
                     Swal.fire(objects['message']);
                     loadTable();
